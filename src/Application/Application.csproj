@@ -1,0 +1,42 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MediatR" Version="12.2.0" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="11.1.0" />
+    <PackageReference Include="FluentValidation" Version="11.9.1" />
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.9.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Vehicles\GetByLicensePlate\" />
+    <None Remove="Vehicles\Delete\" />
+    <None Remove="Customers\" />
+    <None Remove="Customers\Create\" />
+    <None Remove="Customers\Delete\" />
+    <None Remove="Customers\GetById\" />
+    <None Remove="Customers\GetAll\" />
+    <None Remove="Commons\" />
+    <None Remove="Customers\Commons\" />
+    <None Remove="Customers\Commons\Validators\" />
+    <None Remove="Pipelines\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Customers\" />
+    <Folder Include="Customers\Create\" />
+    <Folder Include="Customers\Delete\" />
+    <Folder Include="Customers\GetById\" />
+    <Folder Include="Customers\GetAll\" />
+    <Folder Include="Commons\" />
+    <Folder Include="Customers\Commons\" />
+    <Folder Include="Customers\Commons\Validators\" />
+    <Folder Include="Pipelines\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Domain\Domain.csproj" />
+  </ItemGroup>
+</Project>
